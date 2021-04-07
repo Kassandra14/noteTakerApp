@@ -33,6 +33,8 @@ const getNotes = () =>
     },
   });
 
+
+
 const saveNote = (note) =>
   fetch('/api/notes', {
     method: 'POST',
@@ -50,19 +52,33 @@ const deleteNote = (id) =>
     },
   });
 
-const renderActiveNote = () => {
-  hide(saveNoteBtn);
+// const renderActiveNote = () => {
+//   hide(saveNoteBtn);
 
-  if (activeNote.id) {
-    noteTitle.setAttribute('readonly', true);
-    noteText.setAttribute('readonly', true);
-    noteTitle.value = activeNote.title;
-    noteText.value = activeNote.text;
+//   if (activeNote.id) {
+//     noteTitle.setAttribute('readonly', true);
+//     noteText.setAttribute('readonly', true);
+//     noteTitle.value = activeNote.title;
+//     noteText.value = activeNote.text;
+//   } else {
+//     noteTitle.value = '';
+//     noteText.value = '';
+//   }
+// };
+const renderActiveNote = () => {
+  hide(saveNoteBtn); if (activeNote.id) {
+  // console.log("renderActiveNote if ran"); noteTitle.setAttribute('readonly', true);
+  noteText.setAttribute('readonly', true);
+  noteTitle.value = activeNote.title;
+  noteText.value = activeNote.text;
   } else {
-    noteTitle.value = '';
-    noteText.value = '';
-  }
-};
+  noteTitle.value = '';
+  noteText.value = '';
+  // console.log("renderActiveNote else ran");
+  // Added by TJ to remove readonly when clicking new note button. 
+  noteTitle.removeAttribute('readonly', true);
+  noteText.removeAttribute('readonly', true); }
+ };
 
 const handleNoteSave = () => {
   const newNote = {
