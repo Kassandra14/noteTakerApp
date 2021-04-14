@@ -1,32 +1,26 @@
-# Note Taker App
+# noteTakerApp
 
-## Your Task
+## Description
 
-This application is a node express package based app that allows users to take notes, save and delete them in html interface with a backend express server.  It is deployed to Github and Heroku.
+This app creates notes - saves them to db and then allows you to delete or edit them later.  Application uses mainly node express, and application backend stores notes with unique IDs in a JSON file.
 
+## User Story
 
-## Sample User Story
-
+```
 AS A small business owner
 I WANT to be able to write and save notes
 SO THAT I can organize my thoughts and keep track of tasks I need to complete
-
-### Screenshot
-
-![](2021-04-06-21-53-06.png)
-
-### Github Repo
+```
 
 
-### Link to deployed App
+## Screenshot
 
-https://kassandra14.github.io/noteTakerApp/
+![](2021-04-14-14-18-12.png)
 
 
 
-## 
+## Deployed application
 
+* Github repo:  https://github.com/Kassandra14/noteTakerApp
 
-
-  * Application must be deployed to Heroku.
-
+* Heroku app:  https://powerful-sands-77017.herokuapp.com/
